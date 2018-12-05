@@ -23,14 +23,11 @@ What we used to run the experiments
 # Brief Project Structure
 ------------
 
-    ├── misc                           : Directory containing the scripts to generate the dataset
-    │   ├── gen-moving-mnist.ipynb     : Script to generate the moving-mnist dataset
-    |
-    ├── dataset                        
-    │   ├── raw                        : raw recordings  
-    │   ├── input                      : recordings set as input to the mask rcnn
-    │   ├── annotations                : mask rcnn output. the (approximate) ground truth
-    |
+    \dataset                        
+        \raw                        : raw recordings  
+        \input                      : recordings set as input to the mask rcnn
+        \annotations                : mask rcnn output. the (approximate) ground truth
+    
     |── annotator                      
     │   ├── mask-rcnn                  : mask rcnn people detector 
     │   ├── annotator                  : hungarian tracker 

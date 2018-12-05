@@ -34,6 +34,7 @@ What we used to run the experiments
     |── annotator                      
     │   ├── mask-rcnn                  : mask rcnn people detector 
     │   ├── annotator                  : hungarian tracker 
+    │   ├── annotate.sh                : shell script that runs the full annotation pipeline
     │
     ├── results                        : Directory containing all results in .gif format
     │   ├── moving-mnist

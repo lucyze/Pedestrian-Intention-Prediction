@@ -55,6 +55,11 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 2)	Run the Mask RCNN people detector on the input video at \dataset\input\filename. The output is a textfile containing the detections.
 
+| Frame no  | UID |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 3)	Specify the crossing in the cropped image.
 
 4)	Convert the video 

@@ -29,11 +29,18 @@ What we used to run the experiments
         ├── annotations                : mask rcnn output. the (approximate) ground truth
     
     ├── annotator                      
-        ├── mask-rcnn                  : mask rcnn people detector 
-        ├── annotator                  : hungarian tracker 
+        ├── mask-rcnn.pytorch          : mask rcnn people detector 
+        ├── tracker                    : hungarian tracker 
         ├── annotate.sh                : shell script that runs the full annotation pipeline
      
-     
+    ├── intention_prediction
+        ├── models                     : pretrained models 
+        ├── results                    : 
+        ├── scripts                    : scripts containing the models and data loader
+        ├── train.py                   : train script
+        ├── train.sh                   : train script
+        ├── test.ipynb                 : test ipython script (guided backprop, evaluation)
+        
     ├── README.md                      : the README guideline and explanation for our project.
     ├── report.pdf                     : report
     ├── slides_midterm.pptx            : mid-term presentation slides

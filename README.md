@@ -23,23 +23,21 @@ What we used to run the experiments
 # Brief Project Structure
 ------------
 
-    \dataset                        
-        \raw                        : raw recordings  
-        \input                      : recordings set as input to the mask rcnn
-        \annotations                : mask rcnn output. the (approximate) ground truth
+    ├── dataset                        
+        ├── raw                        : raw recordings  
+        ├── input                      : recordings set as input to the mask rcnn
+        ├── annotations                : mask rcnn output. the (approximate) ground truth
     
-    |── annotator                      
-    │   ├── mask-rcnn                  : mask rcnn people detector 
-    │   ├── annotator                  : hungarian tracker 
-    │   ├── annotate.sh                : shell script that runs the full annotation pipeline
-    │
-    ├── results                        : Directory containing all results in .gif format
-    │   ├── moving-mnist
-    │       ├── 2                      : Directory containing long-term prediction results for the moving-mnist with 2 digits
-    |
-    |── README.md                      : the README guideline and explanation for our project.
+    ├── annotator                      
+        ├── mask-rcnn                  : mask rcnn people detector 
+        ├── annotator                  : hungarian tracker 
+        ├── annotate.sh                : shell script that runs the full annotation pipeline
+     
+     
+    ├── README.md                      : the README guideline and explanation for our project.
     ├── report.pdf                     : report
-    ├── slides.pptx                    : slides
+    ├── slides_midterm.pptx            : mid-term presentation slides
+    ├── slides_final.pptx              : final presentation slides
 
 # Dataset
 ------------

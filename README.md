@@ -55,9 +55,10 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 2)	Run the Mask RCNN people detector on the input video at \dataset\input\filename. The output is a csv containing the detections.
 
-| Frame no  | UID | tlx | tlx | width | height | score | cross_true | incrossing | lifetime | folderpath | filename | cross_pred |  
-| ------------- | ------------- |
-| 1 | 0 | 474 | 12 | 20 | 56 | 0.995529 | 0 | 0 | 286 | crops/Ouchy-2-Left/0000000000 | 0000000001.png | -1  |
+| Frame no  | UID | tlx | tlx | width | height | score |  
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1 | 0 | 474 | 12 | 20 | 56 | 0.995529 |
+| 1 | 0 | 474 | 12 | 20 | 56 | 0.995529 |
 
 3)	Specify the crossing in the cropped image.
 

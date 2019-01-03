@@ -57,6 +57,8 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 1)	Decide on the region of interest that the annotator will operate on in the following order (top left x coordinate, top left y coordinate, bottom right x coordinate, bottom right y coordinate). The coordinates in this example are (1,2,3,4). Crop this region via ffmpeg and place the output in .\dataset\input\filename
 
+![Alt Text](/images/dataset/step1.png)
+
 2)	Run the Mask RCNN people detector on the input video at `/dataset\input\filename`. The output is a csv text file containing the detections which shows the following when read and displayed via pandas. Note that the UID of each detection is initialized as -1 and will be updated and will be given a unique UID when the tracker is run.
 
   ```bash

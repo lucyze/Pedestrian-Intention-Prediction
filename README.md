@@ -5,7 +5,9 @@
   * [Requirements](#requirements)
   * [Brief Project Structure](#brief-project-structure)
   * [Dataset](#usage)
+  * [Training](#usage)
   * [Results](#results)
+    * [Prediction](#long-term-prediction)
     * [Long-Term Prediction](#long-term-prediction)
     * [Out of Domain Runs (1 input object)](#out-of-domain-runs-1-input-object)
     * [Out of Domain Runs (3 input objects)](#out-of-domain-runs-3-input-objects)
@@ -111,9 +113,9 @@ The training dataset was too large to be uploaded to github (~2GB). To train, ru
 
 # Results
 ------------
-## Long-Term Prediction
+## Prediction
 
-Reconstruction results for 2 input objects. The sequence is 200 frames long and both models received the ground truth as input for the first 20 frames. **Top: Ground Truth, Middle: RNN, Bottom: VRNN**
+Prediction results when classifying at every timestep. Refer to report for architecture details. A green  **Top: Ground Truth, Middle: RNN, Bottom: VRNN**
 
 ![Alt Text](/results/moving-shapes/2/0-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/1-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/2-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/3-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/4-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/5-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/6-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/7-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/8-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/9-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/10-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/11-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/12-2-shapes.gif)
 

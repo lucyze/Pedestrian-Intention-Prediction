@@ -64,7 +64,7 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 | 1 | -1 | 474 | 12 | 20 | 56 | 0.995529 |
 | 1 | -1 | 474 | 12 | 20 | 56 | 0.995529 |
 
-4)	Run the `hungarian.py` and set the `maximum_allowed_distance` (pixels) and the `maximum_limbo_lifetime` (frames) parameters. The `maximum_allowed_distance` prevents a detection at `t1` from being assigned to a detection at `t2` if their distance is above said parameter. The `maximum_limbo_lifetime` stops the tracker for any object that has remained in limbo without a successful match i.e. it stops looking for a correspondence. Running `hungarian.py` appends a new column `label` to the csv text file.
+4)	Run the `hungarian.py` and set the `maximum_allowed_distance` (pixels) and the `maximum_limbo_lifetime` (frames) parameters. The `maximum_allowed_distance` prevents a detection at `t1` from being assigned to a detection at `t2` if their distance is above said parameter. The `maximum_limbo_lifetime` stops the tracker for any object that has remained in limbo without a successful match i.e. it stops looking for a correspondence for an object if that object has not found a match after said duration. Running `hungarian.py` appends a new column `label` to the csv text file.
 
 5) Specify the crossing in the cropped image then run `classify_trajectories.py` to determine pedestrians that crossed the road. Running `classify_trajectories.py` appends the columns `cross` that states if the pedestrian eventually crossed the road, and `incrossing` that states if the pedestrian is currently in the crossing or is at the sidewalks. Note that the value of `cross` for each pedestrian will be similar throughout his lifetime.
 

@@ -24,26 +24,30 @@ What we used to run the experiments
 ------------
 
     ├── dataset                        
-        ├── raw                        : raw recordings  
-        ├── input                      : recordings set as input to the mask rcnn
-        ├── annotations                : mask rcnn output. the (approximate) ground truth
+        ├── raw                        : folder containing the raw recordings  
+        ├── processed                  : folder containing the cropped/annotated recordings
+        ├── annotations                : folder containing the (approximate) ground truth text file i.e. the output of mask rcnn
+        ├── crops                      : folder containing the pedestrian crops that will be used for training
     
     ├── annotator                      
-        ├── mask-rcnn.pytorch          : mask rcnn people detector 
-        ├── tracker                    : hungarian tracker 
+        ├── mask-rcnn.pytorch          : folder containing the mask rcnn people detector 
+        ├── hungarian_tracker.py       : python script that runs the hungarian tracker 
+        ├── assign_labels.py           : python script that assigns the label (cross / did not cross) to each pedestrian
+        ├── crop_images.py             : python script that crops the pedestrian and places them in /dataset/crops
         ├── annotate.sh                : shell script that runs the full annotation pipeline
+        ├── annotate-sample1.sh        : shell script that sets the parameters for the sample1 video
      
     ├── intention_prediction
-        ├── models                     : pretrained models 
+        ├── models                     : pretrained model weights
         ├── results                    : 
-        ├── scripts                    : scripts containing the models and data loader
+        ├── scripts                    : folder containing the model and data loader python scripts
         ├── train.py                   : train script
         ├── train.sh                   : train script
-        ├── test.ipynb                 : test ipython script (guided backprop, evaluation)
-        
-    ├── README.md                      : the README guideline and explanation for our project.
+        ├── test.ipynb                 : test ipython script for guided backprop, evaluation and vizualization
+     
+    ├── images                         : images used for this github repository
     ├── report.pdf                     : report
-    ├── slides_midterm.pptx            : mid-term presentation slides
+    ├── slides_midterm.pptx            : midterm presentation slides
     ├── slides_final.pptx              : final presentation slides
 
 # Dataset

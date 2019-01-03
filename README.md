@@ -53,12 +53,11 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 1)	Decide on the region of interest that the annotator will operate on in the following order (top left x coordinate, top left y coordinate, bottom right x coordinate, bottom right y coordinate). The coordinates in this example are (1,2,3,4). Crop this region via ffmpeg and place the output in .\dataset\input\filename
 
-2)	Run the Mask RCNN people detector on the input video at \dataset\input\filename. The output is a textfile containing the detections.
+2)	Run the Mask RCNN people detector on the input video at \dataset\input\filename. The output is a csv containing the detections.
 
-| Frame no  | UID |
+| Frame no  | UID | tlx | tlx | width | height | score | cross_true | incrossing | lifetime | folderpath | filename | cross_pred |  
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| 1 | 0 | 474 | 12 | 20 | 56 | 0.995529 | 0 | 0 | 286 | crops/Ouchy-2-Left/0000000000 | 0000000001.png | -1  |
 
 3)	Specify the crossing in the cropped image.
 

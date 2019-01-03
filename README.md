@@ -117,9 +117,7 @@ The training dataset was too large to be uploaded to github (~2GB). To train, ru
 
 Prediction results when classifying at every timestep. Refer to report for architecture details. A green  **Top: Ground Truth, Middle: RNN, Bottom: VRNN**
 
-![Alt Text](/results/moving-shapes/2/0-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/1-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/2-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/3-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/4-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/5-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/6-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/7-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/8-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/9-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/10-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/11-2-shapes.gif) ![Alt Text](/results/moving-shapes/2/12-2-shapes.gif)
-
-![Alt Text](/results/moving-mnist/2/0-2-digits.gif) ![Alt Text](/results/moving-mnist/2/1-2-digits.gif) ![Alt Text](/results/moving-mnist/2/2-2-digits.gif) ![Alt Text](/results/moving-mnist/2/3-2-digits.gif) ![Alt Text](/results/moving-mnist/2/4-2-digits.gif) ![Alt Text](/results/moving-mnist/2/5-2-digits.gif) ![Alt Text](/results/moving-mnist/2/6-2-digits.gif) ![Alt Text](/results/moving-mnist/2/7-2-digits.gif) ![Alt Text](/results/moving-mnist/2/8-2-digits.gif) ![Alt Text](/results/moving-mnist/2/9-2-digits.gif) ![Alt Text](/results/moving-mnist/2/10-2-digits.gif) ![Alt Text](/results/moving-mnist/2/11-2-digits.gif) ![Alt Text](/results/moving-mnist/2/12-2-digits.gif)
+![Alt Text](/images/prediction/Ouchy1.gif) ![Alt Text](/images/prediction/Ouchy2.gif) 
 
 ## Out of Domain Runs (1 input object)
 

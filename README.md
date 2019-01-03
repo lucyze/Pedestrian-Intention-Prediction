@@ -53,16 +53,26 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 1)	Decide on the region of interest that the annotator will operate on in the following order (top left x coordinate, top left y coordinate, bottom right x coordinate, bottom right y coordinate). The coordinates in this example are (1,2,3,4). Crop this region via ffmpeg and place the output in .\dataset\input\filename
 
-2)	Run the Mask RCNN people detector on the input video at \dataset\input\filename. The output is a csv containing the detections.
+2)	Run the Mask RCNN people detector on the input video at `/dataset\input\filename`. The output is a csv text file containing the detections which shows the following when read and displayed via pandas. Note that the UID of each detection is initialized as -1 and will be updated and will be given a unique UID when the tracker is run.
 
+  ```bash
+  df = df.read_csv("../dataset/annotations/sample1-modified.txt")
+  print(df)
+  ```
 | Frame no  | UID | tlx | tlx | width | height | score |  
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 1 | 0 | 474 | 12 | 20 | 56 | 0.995529 |
-| 1 | 0 | 474 | 12 | 20 | 56 | 0.995529 |
+| 1 | -1 | 474 | 12 | 20 | 56 | 0.995529 |
+| 1 | -1 | 474 | 12 | 20 | 56 | 0.995529 |
 
-3)	Specify the crossing in the cropped image.
+4)	Run the `hungarian.py` and set the `maximum_allowed_distance` (pixels) and the `maximum_limbo_lifetime` (frames) parameters. The `maximum_allowed_distance` prevents a detection at `t1` from being assigned to a detection at `t2` if their distance is above said parameter. The `maximum_limbo_lifetime` stops the tracker for any object that has remained in limbo without a successful match i.e. it stops looking for a correspondence. Running `hungarian.py` appends a new column `label` to the csv text file.
 
-4)	Convert the video 
+5) Specify the crossing in the cropped image then run `classify_trajectories.py` to determine pedestrians that crossed the road. Running `classify_trajectories.py` appends the columns `cross` that states if the pedestrian eventually crossed the road, and `incrossing` that states if the pedestrian is currently in the crossing or is at the sidewalks. Note that the value of `cross` for each pedestrian will be similar throughout his lifetime.
+
+6) Crop the pedestrians to create the dataset. The images of each pedestrian will be located at `\dataset\crops\<video_name>\<pedestrian_id>\<frame_number>.png`. For example, the image of pedestrian 2 at frame 1000 for the video sample1.MP4 will be located at `\dataset\crops\sample1\0000000002\0000001000.png`
+
+7) OPTIONAL: The results of the tracker can be visualized by running `annotate_video.py`
+
+We remind the users that a shell script including all the steps have been included at `\annotator\annotate-sample.sh`
 
 #### Testing
 Launch `models\moving-mnist\sample-test.ipynb` 

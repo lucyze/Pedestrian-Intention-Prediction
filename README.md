@@ -114,30 +114,11 @@ The training dataset was too large to be uploaded to github (~2GB). To train, ru
 ------------
 ## Prediction
 
-Prediction results when classifying at every timestep. Refer to report for architecture details. A green bounding box indicates "not crossing" while a red "crossing"
+Run `evaluate_lausanne.ipynb` to get visual results when classifying at every timestep. In the gif below, a green bounding box indicates a decision of "not crossing" while a red bounding box indicates a decision of "crossing".
 
 ![Alt Text](/images/prediction/Ouchy1.gif) ![Alt Text](/images/prediction/Ouchy2.gif) 
+![Alt Text](/images/prediction/Riponne1.gif) ![Alt Text](/images/prediction/Riponne2.gif) 
 
-## Out of Domain Runs (1 input object)
+## Guided backpropagation
 
-Out of domain runs with 3 input objects. The sequence is 40 frames long and both models received the ground truth as input for the first 20 frames. **Top: Ground Truth, Middle: RNN, Bottom: VRNN**
-
-![Alt Text](/results/moving-shapes/1/0-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/1-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/2-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/3-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/4-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/5-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/6-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/7-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/8-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/9-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/10-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/11-1-shapes.gif) ![Alt Text](/results/moving-shapes/1/12-1-shapes.gif)
-
-![Alt Text](/results/moving-mnist/1/0-1-digits.gif) ![Alt Text](/results/moving-mnist/1/1-1-digits.gif) ![Alt Text](/results/moving-mnist/1/2-1-digits.gif) ![Alt Text](/results/moving-mnist/1/3-1-digits.gif) ![Alt Text](/results/moving-mnist/1/4-1-digits.gif) ![Alt Text](/results/moving-mnist/1/5-1-digits.gif) ![Alt Text](/results/moving-mnist/1/6-1-digits.gif) ![Alt Text](/results/moving-mnist/1/7-1-digits.gif) ![Alt Text](/results/moving-mnist/1/8-1-digits.gif) ![Alt Text](/results/moving-mnist/1/9-1-digits.gif) ![Alt Text](/results/moving-mnist/1/10-1-digits.gif) ![Alt Text](/results/moving-mnist/1/11-1-digits.gif) ![Alt Text](/results/moving-mnist/1/12-1-digits.gif)
-
-## Out of Domain Runs (3 input objects)
-
-Out of domain runs with 3 input objects. The sequence is 40 frames long and both models received the ground truth as input for the first 20 frames. **Top: Ground Truth, Middle: RNN, Bottom: VRNN**
-
-![Alt Text](/results/moving-shapes/3/0-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/1-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/2-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/3-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/4-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/5-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/6-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/7-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/8-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/9-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/10-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/11-3-shapes.gif) ![Alt Text](/results/moving-shapes/3/12-3-shapes.gif)
-
-![Alt Text](/results/moving-mnist/3/0-3-digits.gif) ![Alt Text](/results/moving-mnist/3/1-3-digits.gif) ![Alt Text](/results/moving-mnist/3/2-3-digits.gif) ![Alt Text](/results/moving-mnist/3/3-3-digits.gif) ![Alt Text](/results/moving-mnist/3/4-3-digits.gif) ![Alt Text](/results/moving-mnist/3/5-3-digits.gif) ![Alt Text](/results/moving-mnist/3/6-3-digits.gif) ![Alt Text](/results/moving-mnist/3/7-3-digits.gif) ![Alt Text](/results/moving-mnist/3/8-3-digits.gif) ![Alt Text](/results/moving-mnist/3/9-3-digits.gif) ![Alt Text](/results/moving-mnist/3/10-3-digits.gif) ![Alt Text](/results/moving-mnist/3/11-3-digits.gif) ![Alt Text](/results/moving-mnist/3/12-3-digits.gif) 
-
-## Generation diversity
-
-We test the VRNN's capability in generating novel sequences on 4 separate runs .  Each sequence is 200 frames long and both models received the ground truth as input for the first 20 frames. **Top: Ground Truth. Each row is a separate run.**
-
-![Alt Text](/results/moving-shapes/diversity/0-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/1-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/2-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/3-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/4-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/5-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/6-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/7-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/8-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/9-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/10-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/11-2-shapes.gif) ![Alt Text](/results/moving-shapes/diversity/12-2-shapes.gif)
-
-![Alt Text](/results/moving-mnist/diversity/6-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/7-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/8-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/9-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/10-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/11-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/12-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/13-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/14-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/15-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/16-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/17-2-digits.gif) ![Alt Text](/results/moving-mnist/diversity/18-2-digits.gif)
+Run `guidedbackprop_lausanne.ipynb` to get visual results when classifying at every timestep. In the images below, a green bounding box indicates a decision of "not crossing" while a red bounding box indicates a decision of "crossing".

@@ -115,7 +115,7 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 We remind the users that a shell script including all the steps have been included at `/annotator/annotate-sample.sh` and that the folders `/dataset/all/crops/sample1` and `/dataset/all/annotations/sample1.txt` must be moved to `/dataset/train/crops/sample1` and `/dataset/train/annotations/sample1.txt` for it to be used in the training set. 
 
-#### Training
+# Training
 
 We built a simple CNN LSTM as a baseline for our study. Details are in the report. Run `train.sh` to train the architecture. The model will be saved at `/pedestrian_intention/models/`. 
 
@@ -131,3 +131,7 @@ Run `evaluate_lausanne.ipynb` to get visual results when classifying at every ti
 ## Guided backpropagation
 
 Run `guidedbackprop_lausanne.ipynb` to get visual results when classifying at every timestep. In the images below, a green bounding box indicates a decision of "not crossing" while a red bounding box indicates a decision of "crossing".
+
+![Alt Text](/images/guidedbackprop/crossing1.png) 
+![Alt Text](/images/guidedbackprop/crossing2.png)
+![Alt Text](/images/guidedbackprop/notcrossing1.png)

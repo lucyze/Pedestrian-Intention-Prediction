@@ -114,7 +114,6 @@ The training dataset was too large to be uploaded to github (~2GB). To train, ru
 
 Prediction results when classifying at every timestep. Refer to report for architecture details. A green bounding box indicates "not crossing" while a red "crossing"
 
-<img src="https://github.com/HaziqRazali/Pedestrian-Intention-Prediction/images/prediction/Ouchy1.gif" width="48">
 ![Alt Text](/images/prediction/Ouchy1.gif) ![Alt Text](/images/prediction/Ouchy2.gif) 
 
 ## Out of Domain Runs (1 input object)

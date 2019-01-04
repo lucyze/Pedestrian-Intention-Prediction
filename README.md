@@ -10,10 +10,7 @@ We experiment the use of static cameras. Details are in the attached report. Her
   * [Training](#usage)
   * [Results](#results)
     * [Prediction](#long-term-prediction)
-    * [Long-Term Prediction](#long-term-prediction)
-    * [Out of Domain Runs (1 input object)](#out-of-domain-runs-1-input-object)
-    * [Out of Domain Runs (3 input objects)](#out-of-domain-runs-3-input-objects)
-    * [Generation Diversity](#generation-diversity)
+    * [Guided Backpropagation](#long-term-prediction)
 
 # Requirements
 ------------

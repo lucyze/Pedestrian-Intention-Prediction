@@ -4,7 +4,7 @@
 ------------
   * [Requirements](#requirements)
   * [Brief Project Structure](#brief-project-structure)
-  * [Dataset](#usage)
+  * [Creating the dataset](#usage)
   * [Training](#usage)
   * [Results](#results)
     * [Prediction](#long-term-prediction)
@@ -52,7 +52,7 @@ What we used to run the experiments
     ├── slides_midterm.pptx            : midterm presentation slides
     ├── slides_final.pptx              : final presentation slides
 
-# Dataset
+# Creating the dataset
 ------------
 
 To augment the dataset of [1], we have that can be automatically annotated. In the following, we describe the steps needed to generate (approximate) the ground truths of your own recordings. The examples are done on sample1.MP4. A shell script including all the steps have been included.
@@ -105,9 +105,6 @@ To augment the dataset of [1], we have that can be automatically annotated. In t
 
 We remind the users that a shell script including all the steps have been included at `\annotator\annotate-sample.sh`
 
-#### Testing
-Launch `models\moving-mnist\sample-test.ipynb` 
-
 #### Training
 The training dataset was too large to be uploaded to github (~2GB). To train, run `datasets\gen-moving-mnist.ipynb` with the default main arguments to generate the dataset. Then run `models\moving-mnist\sample-train.ipynb`. Note that the saved model `model.ckpt` will be overwritten.
 
@@ -115,9 +112,9 @@ The training dataset was too large to be uploaded to github (~2GB). To train, ru
 ------------
 ## Prediction
 
-Prediction results when classifying at every timestep. Refer to report for architecture details. A green  **Top: Ground Truth, Middle: RNN, Bottom: VRNN**
+Prediction results when classifying at every timestep. Refer to report for architecture details. A green bounding box indicates "not crossing" while a red "crossing"
 
-![Alt Text](/images/prediction/Ouchy1.gif) ![Alt Text](/images/prediction/Ouchy2.gif) 
+![Alt Text](/images/prediction/Ouchy1.gif){:height="50%" width="50%"} ![Alt Text](/images/prediction/Ouchy2.gif) 
 
 ## Out of Domain Runs (1 input object)
 

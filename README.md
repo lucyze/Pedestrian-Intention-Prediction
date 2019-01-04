@@ -29,7 +29,9 @@ What we used to run the experiments
         ├── raw                        : folder containing the raw recordings  
         ├── processed                  : folder containing the cropped/annotated recordings
         ├── annotations                : folder containing the (approximate) ground truth text file i.e. the output of mask rcnn
-        ├── crops                      : folder containing the pedestrian crops that will be used for training
+        ├── crops                      : folder containing the pedestrian crops
+        ├── train                      : folder containing the training set
+        ├── test                       : folder containing the testing set
     
     ├── annotator                      
         ├── mask-rcnn.pytorch          : folder containing the mask rcnn people detector 

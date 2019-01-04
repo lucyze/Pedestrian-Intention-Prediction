@@ -1,5 +1,7 @@
 # Pedestrian Intention Prediction
 
+We experiment the use of static cameras. Details are in the attached report. Here, we describe usage.
+
 # Contents
 ------------
   * [Requirements](#requirements)

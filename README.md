@@ -114,7 +114,7 @@ The training dataset was too large to be uploaded to github (~2GB). To train, ru
 
 Prediction results when classifying at every timestep. Refer to report for architecture details. A green bounding box indicates "not crossing" while a red "crossing"
 
-![Alt Text](/images/prediction/Ouchy1.gif){:height="50%" width="50%"} ![Alt Text](/images/prediction/Ouchy2.gif) 
+![Alt Text](/images/prediction/Ouchy1.gif =100x20) ![Alt Text](/images/prediction/Ouchy2.gif) 
 
 ## Out of Domain Runs (1 input object)
 
